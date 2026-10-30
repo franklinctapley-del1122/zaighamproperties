@@ -302,3 +302,107 @@ input,select,textarea{font-size:13px!important;font-weight:500}
   .lux-commercial h2,.lux-files h2,.lux-why h2,.lux-feedback h2{font-size:2.65rem}
   .brand b{font-size:19px}
 }
+
+
+/* HIGH-CONTRAST TYPOGRAPHY PASS — larger scale, darker ink */
+:root{
+  --ink-strong:#080D16;
+  --ink-body:#202936;
+  --ink-muted:#414B58;
+  --accent-hard:#A8792D;
+  --navy-hard:#081525;
+}
+body{color:var(--ink-strong)!important;font-size:16px;font-weight:500}
+p,li{color:var(--ink-body)}
+h1,h2,h3,h4,h5,h6{color:var(--ink-strong)}
+/* Main navigation and site identity */
+.navwrap nav a{font-size:14px;font-weight:800;color:#172333}
+.brand b{font-size:25px;color:#081525;font-weight:800}
+.brand small{font-size:10px;color:#805719;font-weight:800}
+.topline{font-size:10px;font-weight:800;color:#fff}
+/* Legacy page headings */
+.hero h1,.page-intro h1{font-size:clamp(58px,7.6vw,94px);font-weight:700!important;color:#fff}
+.section-head h2,.phase-band h2,.split-cta h2,.about-layout h2,
+.gallery-heading h2,.rates-summary h2,.rates-guide h2,
+.rate-phase-heading h3,.rates-info-grid h3,.rates-guidance-cta h3,
+.affidavit-article h2,.transfer-section h2,.transfer-related h2,
+.transfer-final h2,.contact-panel h2{
+  font-size:clamp(40px,4.7vw,58px);font-weight:700!important;color:#081525
+}
+.listing-content h3,.phase-card h3,.guide-list h2{font-size:27px;font-weight:700!important;color:#101b2a}
+.hero-content>p,.page-intro>p,.section-head>p,.listing-content p,
+.phase-card p,.guide-list p,.about-layout p,.contact-panel p{
+  font-size:15px;color:#263241;line-height:1.85;font-weight:500
+}
+.page-intro{background:#081525}
+.eyebrow,.lux-kicker,.dark-kicker{color:#805719;font-size:12px;font-weight:800}
+.btn,.inline-link,.lux-btn,.lux-search-button,.lux-text-link{font-size:13px;font-weight:800}
+/* Luxury editorial homepage — bold, oversized and high contrast */
+.lux-hero h1{font-size:clamp(66px,9vw,112px);font-weight:700!important;color:#fff;letter-spacing:-.045em}
+.lux-hero-content>p{font-size:17px;font-weight:500;color:#fff;line-height:1.8}
+.lux-kicker{font-size:12px;color:#F0C875;font-weight:800;letter-spacing:.19em}
+.lux-search-intro h2,.lux-section h2,.lux-investment h2,
+.lux-commercial h2,.lux-files h2,.lux-why h2,.lux-feedback h2{
+  font-size:clamp(44px,5.2vw,66px);font-weight:700!important;color:inherit
+}
+.lux-search-intro h2,.lux-section h2,.lux-investment h2{color:#081525}
+.lux-section-heading>div>p,.lux-search-intro p,.lux-investment-copy>p,
+.lux-commercial-copy>p,.lux-why-heading>p,.lux-feedback-left>p{
+  font-size:15px;color:#303B48;font-weight:500;line-height:1.9
+}
+.lux-stat-lead h2{font-size:42px;font-weight:700!important;color:#fff}
+.lux-stat>b{font-size:45px;font-weight:800;color:#F0C875}
+.lux-stat>span{font-size:11px;font-weight:800;color:#fff}
+.lux-stat small{font-size:12px;color:#E2E8EF}
+.lux-phase-card b{font-size:14px;font-weight:800;color:#101b2a}
+.lux-phase-card small{font-size:11px;color:#46515e;font-weight:600}
+.lux-property-info h3{font-size:27px;font-weight:700!important;color:#081525}
+.lux-property-info>small,.lux-property-info>div{font-size:12px;color:#303B48;font-weight:600}
+.lux-property-info>div b,.lux-rate-table td b{color:#805719;font-weight:800}
+.lux-commercial{background:#081525}
+.lux-commercial h2,.lux-files h2,.lux-why h2,.lux-feedback h2{color:#fff}
+.lux-commercial-copy>p,.lux-files-head>p,.lux-why-heading>p,.lux-feedback-left>p{color:#E0E6ED}
+.lux-investment-list b,.lux-file-cards b,.lux-value-grid h3,
+.lux-service-card h3,.lux-feedback-card h3,.lux-guides-list>a b,
+.lux-location-note b{font-size:23px;font-weight:700!important;color:#101b2a}
+.lux-investment-list small,.lux-service-card p,.lux-guides-list>a small,
+.lux-location-note small{font-size:13px;color:#3C4653;font-weight:500}
+.lux-files{background:#102B21}
+.lux-files h2,.lux-files .lux-kicker{color:#fff}
+.lux-file-cards b{color:#fff}
+.lux-file-cards span{font-size:12px;color:#F1F4F1}
+.lux-why{background:#081525}
+.lux-value-grid h3{color:#fff}
+.lux-value-grid p{font-size:13px;color:#E1E7EF}
+.lux-service-card h3{font-size:23px}
+.lux-feedback{background:#DED9CE}
+.lux-feedback-card h3{font-size:31px;color:#081525}
+.lux-feedback-card p{font-size:15px;color:#263241}
+.lux-guides-list>a b{font-size:21px}
+.lux-guides-list>a small{font-size:12px}
+.lux-map-frame>a{font-size:12px;font-weight:800}
+/* Stronger contrast for secondary page controls, tables and footer */
+.quick-search label,.filters label,.contact-form label,
+.lux-search-panel label,.lux-rate-filters label{font-size:11px;color:#303B48;font-weight:800}
+.quick-search select,.filters select,.filters input,
+.contact-form input,.contact-form select,.contact-form textarea,
+.lux-search-panel select,.lux-rate-filters select{font-size:14px!important;color:#101b2a;font-weight:600}
+th,.rate-table th,.aff-table th{color:#fff;background:#102033;font-size:11px;font-weight:800}
+td,.rate-table td,.aff-table td{font-size:14px;color:#202936;font-weight:500}
+.rate-value,.rate-numeric{color:#704B17;font-weight:800}
+.disclaimer,.aff-small-note,.aff-disclaimer{font-size:12px;color:#46515e}
+.footer{background:#07140F}
+.footer p,.footer-grid a:not(.brand){font-size:13px;color:#E5EBE6}
+.footer h4{font-size:12px;color:#F0C875;font-weight:800}
+.floating-wa{font-size:14px;font-weight:800}
+@media(max-width:700px){
+  .hero h1,.page-intro h1{font-size:clamp(48px,12vw,68px)}
+  .lux-hero h1{font-size:clamp(55px,15vw,76px)}
+  .lux-search-intro h2,.lux-section h2,.lux-investment h2,
+  .lux-commercial h2,.lux-files h2,.lux-why h2,.lux-feedback h2{font-size:42px}
+  .section-head h2,.phase-band h2,.split-cta h2,.about-layout h2{font-size:39px}
+  .lux-property-info h3,.listing-content h3{font-size:25px}
+  .lux-phase-card b{font-size:12px}
+  .lux-service-card h3{font-size:20px}
+  .lux-section-heading>div>p,.lux-search-intro p{font-size:14px}
+}
