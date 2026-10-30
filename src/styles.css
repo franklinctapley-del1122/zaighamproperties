@@ -406,3 +406,22 @@ td,.rate-table td,.aff-table td{font-size:14px;color:#202936;font-weight:500}
   .lux-service-card h3{font-size:20px}
   .lux-section-heading>div>p,.lux-search-intro p{font-size:14px}
 }
+
+
+/* DHA phase cards: keep every label readable on the blue hover state */
+.lux-phase-card:hover,
+.lux-phase-card:focus-visible{
+  color:#fff!important;
+}
+.lux-phase-card:hover b,
+.lux-phase-card:hover small,
+.lux-phase-card:hover span,
+.lux-phase-card:hover p,
+.lux-phase-card:hover svg,
+.lux-phase-card:focus-visible b,
+.lux-phase-card:focus-visible small,
+.lux-phase-card:focus-visible span,
+.lux-phase-card:focus-visible p,
+.lux-phase-card:focus-visible svg{
+  color:#fff!important;
+}
