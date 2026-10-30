@@ -116,6 +116,7 @@ function Contact(){const[name,setName]=useState(''),[interest,setInterest]=useSt
 function ExtraPage({title,desc,items}){return <><PageIntro eyebrow="DHA LAHORE PROPERTY INFORMATION" title={<>{title}</>} desc={desc}/><section className="section guide-list">{items.map((x,i)=><article key={x}><span>{'0'+(i+1)}</span><div><h2>{x}</h2><p>Contact us for current information, availability and documentation checks in DHA Lahore.</p><a className="inline-link" href={wa('Please guide me about '+x+' in DHA Lahore.')}>Enquire on WhatsApp <ArrowUpRight size={15}/></a></div><BookOpen/></article>)}</section></>}
 
 function PhaseSevenGuide(){
+ useEffect(()=>{document.title='DHA Phase 7 Lahore: Blocks, File Rates & Buyer Guide | Zaigham Properties';let meta=document.querySelector('meta[name="description"]');if(!meta){meta=document.createElement('meta');meta.name='description';document.head.appendChild(meta)}meta.content='Explore DHA Phase 7 Lahore blocks, location, indicative file rates, residential and commercial property checks, and a practical buyer due-diligence guide.';return ()=>{document.title='Zaigham Properties | DHA Lahore Real Estate'}},[]);
  const blocks=['P','Q','R','S','T','U','V','W','X','Y','Z1','Z2'];
  const residential=[['5 Marla','Allocation file','PKR 30 Lac'],['5 Marla','Affidavit file','PKR 33 Lac'],['7 Marla','Allocation file','PKR 45.5 Lac']];
  const commercial=[['4 Marla','Allocation file','PKR 1.31 Crore'],['4 Marla','Affidavit file','PKR 1.50 Crore']];
