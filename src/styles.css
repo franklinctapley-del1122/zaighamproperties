@@ -447,3 +447,89 @@ td,.rate-table td,.aff-table td{font-size:14px;color:#202936;font-weight:500}
 .premium-footer .footer-bottom{max-width:1320px;margin:auto;padding:22px 0 0;border-top:1px solid #ffffff26;display:flex;justify-content:space-between;gap:15px;color:#bac4cf;font-size:10px;letter-spacing:.09em}
 @media(max-width:800px){.premium-footer .footer-main{grid-template-columns:1fr 1fr;gap:42px;padding:58px 0 42px}.premium-footer .footer-brand-col{grid-column:1/-1}.premium-footer .footer-intro{max-width:560px}}
 @media(max-width:520px){.premium-footer{padding:0 7% 20px}.premium-footer .footer-main{grid-template-columns:1fr 1fr;gap:32px 18px}.premium-footer .footer-brand-col{grid-column:1/-1}.premium-footer .footer-brand b{font-size:27px}.premium-footer .footer-links-col h4{font-size:10px}.premium-footer .footer-links-col a{font-size:12px}.premium-footer .footer-bottom{flex-direction:column;font-size:9px;line-height:1.7}}
+
+
+/* Dedicated DHA Phase 7 editorial guide */
+.phase7-page{background:#f5f3ed;color:#132033}
+.phase7-hero{min-height:570px;display:flex;align-items:center;padding:90px 8%;color:#fff;background:linear-gradient(90deg,rgba(5,17,31,.96),rgba(5,17,31,.78) 58%,rgba(5,17,31,.35)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=88') center/cover}
+.phase7-hero-inner{max-width:1240px;margin:auto;width:100%}
+.phase7-hero .eyebrow,.phase7-kicker,.phase7-hero-meta{color:#e3c17e}
+.phase7-kicker{font-size:14px;font-weight:700;letter-spacing:.08em;margin:25px 0 12px}
+.phase7-hero h1{font:700 clamp(48px,7vw,86px)/1.03 var(--font-editorial);max-width:900px;margin:0;color:#fff}
+.phase7-hero h1 em,.phase7-heading h2 em,.phase7-bottom h2 em{color:#d9b66e;font-style:normal}
+.phase7-lead{max-width:690px;font-size:17px;line-height:1.85;color:#e2e8ef;margin:25px 0}
+.phase7-actions{display:flex;gap:14px;flex-wrap:wrap}
+.phase7-actions a,.phase7-bottom>a,.phase7-cta>a{display:inline-flex;align-items:center;gap:10px;padding:15px 20px;font-weight:800}
+.phase7-actions .btn-primary{background:#c49b55;color:#081525}
+.phase7-actions .btn-secondary{border:1px solid #ffffff70;color:#fff}
+.phase7-hero-meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:38px;font-size:12px;font-weight:700}
+.phase7-hero-meta span{display:flex;align-items:center;gap:8px}
+.phase7-toc{position:sticky;top:76px;z-index:5;display:flex;justify-content:center;gap:28px;flex-wrap:wrap;background:#fff;border-bottom:1px solid #dedbd3;padding:16px 5%;box-shadow:0 5px 20px #1020330b}
+.phase7-toc a{font-size:12px;font-weight:800;color:#27384a}
+.phase7-toc a:hover{color:#9b712f}
+.phase7-section,.phase7-location,.phase7-prices{padding:90px 8%;max-width:1600px;margin:auto}
+.phase7-heading{max-width:850px;margin-bottom:38px}
+.phase7-heading>span,.phase7-cta span,.phase7-bottom span{font-size:11px;letter-spacing:.18em;color:#997237;font-weight:900}
+.phase7-heading h2{font:700 clamp(36px,4vw,54px)/1.08 var(--font-editorial);margin:15px 0;color:#102033}
+.phase7-heading>p{font-size:16px;line-height:1.85;color:#4b5662}
+.phase7-overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.phase7-overview-grid article,.phase7-block-grid article,.phase7-facility-grid article{background:#fff;border:1px solid #e2ded4;padding:26px}
+.phase7-overview-grid b{font:700 23px var(--font-editorial);color:#102033}
+.phase7-overview-grid p,.phase7-block-grid p,.phase7-facility-grid p{font-size:14px;line-height:1.8;color:#53606c}
+.phase7-location{background:#e8e5dc;max-width:none}
+.phase7-location .phase7-heading,.phase7-location-grid{max-width:1320px;margin-left:auto;margin-right:auto}
+.phase7-location-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:38px;align-items:start}
+.phase7-location-grid h3,.phase7-rate-grid h3,.phase7-subhead{font:700 27px var(--font-editorial);color:#102033}
+.phase7-location-grid ul{padding-left:20px;color:#46515e;line-height:2;font-size:14px}
+.phase7-map{background:#fff;padding:10px;box-shadow:0 15px 40px #10203314}
+.phase7-map iframe{width:100%;height:340px;border:0;display:block}
+.phase7-map small{display:block;padding:12px;color:#596471;font-size:11px}
+.phase7-block-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.phase7-block-grid article{min-height:205px;display:flex;flex-direction:column;align-items:flex-start}
+.phase7-block-grid article>span{font-size:9px;letter-spacing:.16em;color:#997237;font-weight:900}
+.phase7-block-grid article>b{font:700 44px var(--font-editorial);color:#102033}
+.phase7-block-grid article p{margin:8px 0 16px}
+.phase7-block-grid article a,.phase7-location-grid .inline-link{display:inline-flex;align-items:center;gap:7px;color:#8b642a;font-size:12px;font-weight:900;margin-top:auto}
+.phase7-note,.phase7-warning{margin-top:24px;padding:22px 25px;background:#e9e0cf;border-left:4px solid #b48b48;color:#34404c;font-size:13px;line-height:1.8}
+.phase7-prices{background:#fff;max-width:none}
+.phase7-prices>.phase7-heading,.phase7-prices>.phase7-rate-grid,.phase7-prices>.phase7-warning,.phase7-prices>.phase7-subhead,.phase7-prices>.phase7-factor-grid,.phase7-prices>.phase7-footnote{max-width:1320px;margin-left:auto;margin-right:auto}
+.phase7-rate-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.phase7-rate-grid>div{border:1px solid #e3dfd6;padding:22px}
+.phase7-rate-grid h3{margin:0 0 16px}
+.phase7-rate-grid table{width:100%;border-collapse:collapse}
+.phase7-rate-grid th{background:#102033;color:#fff;text-align:left;padding:13px;font-size:11px}
+.phase7-rate-grid td{padding:14px 12px;border-bottom:1px solid #e9e6df;font-size:13px;color:#263443}
+.phase7-warning{background:#f8f1e4;margin-top:22px}
+.phase7-warning p{margin:8px 0 0}
+.phase7-subhead{margin-top:40px!important}
+.phase7-factor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.phase7-factor-grid span{background:#f2f0ea;padding:17px;font-size:13px;font-weight:800;color:#263443}
+.phase7-footnote{color:#596471;font-size:13px;line-height:1.8;margin-top:20px}
+.phase7-facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.phase7-facility-grid svg{color:#a47b3a;width:25px;height:25px}
+.phase7-facility-grid h3{font:700 22px var(--font-editorial);margin:15px 0 5px}
+.phase7-buying{background:#101f30;color:#fff;max-width:none}
+.phase7-buying .phase7-heading,.phase7-checks,.phase7-cta{max-width:1320px;margin-left:auto;margin-right:auto}
+.phase7-buying .phase7-heading h2{color:#fff}
+.phase7-buying .phase7-heading>p{color:#d0d8e0}
+.phase7-buying .phase7-heading>span{color:#e2bd78}
+.phase7-checks{display:grid;grid-template-columns:1fr 1fr;gap:0 35px}
+.phase7-checks>div{display:flex;gap:20px;align-items:flex-start;border-bottom:1px solid #ffffff27;padding:20px 0}
+.phase7-checks b{font:700 24px var(--font-editorial);color:#dfba75}
+.phase7-checks p{font-size:14px;line-height:1.8;color:#e1e6eb;margin:0}
+.phase7-cta{display:flex;justify-content:space-between;align-items:center;gap:25px;margin-top:38px;padding:28px;background:#1c3045}
+.phase7-cta h3{font:700 26px var(--font-editorial);margin:9px 0;color:#fff}
+.phase7-cta p{font-size:13px;color:#d0d8e0;margin:0}
+.phase7-cta>a,.phase7-bottom>a{background:#d4ad68;color:#102033;white-space:nowrap}
+.phase7-faq-list{max-width:1000px}
+.phase7-faq-list details{border-bottom:1px solid #d8d4cb;padding:20px 0}
+.phase7-faq-list summary{list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center;cursor:pointer;font-weight:800;color:#16283b}
+.phase7-faq-list summary::-webkit-details-marker{display:none}
+.phase7-faq-list details[open] summary svg{transform:rotate(90deg)}
+.phase7-faq-list details p{max-width:850px;font-size:14px;line-height:1.85;color:#56616d}
+.phase7-bottom{padding:70px 8%;background:#e7e1d4;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.phase7-bottom h2{font:700 clamp(32px,4vw,50px)/1.1 var(--font-editorial);max-width:800px;color:#102033;margin:12px 0}
+.phase7-bottom p{color:#56616d;font-size:14px}
+.phase7-disclaimer{padding:25px 8%;font-size:11px;line-height:1.8;color:#66717b;background:#f5f3ed}
+@media(max-width:900px){.phase7-block-grid{grid-template-columns:repeat(3,1fr)}.phase7-overview-grid,.phase7-facility-grid{grid-template-columns:1fr 1fr}.phase7-location-grid{grid-template-columns:1fr}.phase7-toc{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}.phase7-toc a{white-space:nowrap}}
+@media(max-width:600px){.phase7-hero{padding:75px 7%;min-height:620px}.phase7-hero h1{font-size:51px}.phase7-lead{font-size:15px}.phase7-hero-meta{gap:12px;flex-direction:column}.phase7-section,.phase7-location,.phase7-prices{padding:65px 7%}.phase7-block-grid{grid-template-columns:1fr 1fr}.phase7-overview-grid,.phase7-facility-grid,.phase7-rate-grid,.phase7-factor-grid,.phase7-checks{grid-template-columns:1fr}.phase7-rate-grid>div{padding:14px;overflow-x:auto}.phase7-rate-grid table{min-width:390px}.phase7-cta,.phase7-bottom{align-items:flex-start;flex-direction:column}.phase7-bottom{padding:60px 7%}.phase7-toc{top:68px;gap:20px;padding:13px 7%}.phase7-map iframe{height:270px}}
