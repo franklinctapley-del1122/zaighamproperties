@@ -1,0 +1,48 @@
+import React, { useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { MapPin, ShieldCheck, ArrowUpRight, MessageCircle, FileCheck2, Route, Building2 } from 'lucide-react';
+
+const WA='https://wa.me/923224751952?text=';
+const directories={
+ 'phase-6':{name:'DHA Phase 6 Lahore',unit:'Block',items:'A B C D E F G H J K L M N'.split(' '),guide:'/dha-lahore/phase-6/',summary:'Established residential and commercial neighbourhoods. Compare the exact street, plot dimensions, access and surrounding development.'},
+ 'phase-7':{name:'DHA Phase 7 Lahore',unit:'Block',items:'P Q R S T U V W X Y Z1 Z2'.split(' '),guide:'/dha-lahore/phase-7/',summary:'A block-level research page for buyers comparing residential plots and commercial references in Phase 7. Verify exact plot location and current status.'},
+ 'phase-8':{name:'DHA Phase 8 Lahore',unit:'Block',items:'A B C D E F G H J K L M N P Q R S T U V W X Y Z1 Z2 Z3 Z4 Z5 Z6'.split(' '),guide:'/dha-lahore/phase-8/',summary:'Phase 8 includes multiple residential sectors and named areas. Confirm the exact sector, block, plot category and official map position.'},
+ 'phase-9':{name:'DHA Phase 9 Prism Lahore',unit:'Sector',items:'A B C D E F G H J K L M N P Q R'.split(' '),guide:'/dha-lahore/phase-9/',summary:'Phase 9 Prism is covered separately from Phase 9 Town. Check the sector designation, exact plot location, file status and DHA records.'},
+ 'phase-9-town':{name:'DHA Phase 9 Town Lahore',unit:'Block',items:'A B C D E'.split(' '),guide:'/dha-lahore/phase-9-town/',summary:'Phase 9 Town has its own block directory and should not be confused with Phase 9 Prism. Verify the exact block, street and possession status.'}
+};
+const slug=s=>String(s).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+export default function BlockDetail(){
+ const {phase,unit,block}=useParams();
+ const data=directories[phase];
+ const code=(block||'').toUpperCase();
+ const valid=data&&data.items.includes(code)&&((phase==='phase-9'&&unit==='sector')||(phase!=='phase-9'&&unit==='block'));
+ const label=data?data.unit+' '+code:'DHA Lahore property area';
+ const title=valid?label+' | '+data.name+' Property Guide':'DHA Lahore Block Guide';
+ const description=valid?'Explore '+label+' in '+data.name+'. Review plot research, location checks, file verification, possession questions and buyer due diligence with Zaigham Properties.':'Explore DHA Lahore property area guides.';
+ useEffect(()=>{
+  document.title=title+' | Zaigham Properties';
+  let meta=document.querySelector('meta[name="description"]');
+  if(!meta){meta=document.createElement('meta');meta.name='description';document.head.appendChild(meta)}
+  meta.content=description;
+  let canonical=document.querySelector('link[rel="canonical"]');
+  if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.appendChild(canonical)}
+  canonical.href=window.location.origin+window.location.pathname.replace(/\/?$/,'/');
+  return ()=>{document.title='Zaigham Properties | DHA Lahore Real Estate'};
+ },[title,description]);
+ if(!valid)return <main className="section"><h1>Area guide not found</h1><p>Please choose a valid phase and block.</p><Link className="btn dark" to="/dha-lahore/">Browse DHA Lahore guides</Link></main>;
+ const base='/dha-lahore/'+phase+'/';
+ const prefix=phase==='phase-9'?'sector':'block';
+ const message='Assalam o Alaikum, I need verified property details for '+data.name+' '+label+'. Please guide me about current availability, exact location and documents.';
+ const checks=['Confirm the plot number, '+data.unit.toLowerCase()+' and dimensions against the current DHA Lahore layout and record.','Verify seller identity, ownership chain and original allotment or transfer documents through DHA channels.','Request current dues, NDC requirements, possession status and any transfer restrictions.','Visit the exact site and check road access, plot boundaries, level, utilities and surrounding development.','Compare like-for-like properties by size, street position, road width, corner or park-facing status and recent evidence.','Get a written breakdown of asking price, applicable taxes, transfer charges and payment milestones before paying a token.'];
+ const faqs=[['Which properties should I compare in '+label+'?','Compare only properties with matching plot size, category, possession status and a similar street or location. Current availability must be confirmed individually.'],['Are prices on this page live market rates?','No. This page does not publish an unverified live quote. Ask for a date-stamped, plot-specific quote and compare it with recent comparable evidence.'],['How do I verify a plot in '+label+'?','Match the plot number and location with the current DHA map and records, verify ownership and dues, inspect the site and obtain independent document review.'],['Is this block part of Phase 9 Prism or Phase 9 Town?',''+(phase==='phase-9'?'This page belongs to DHA Phase 9 Prism, not Phase 9 Town.':'This page belongs to DHA Phase 9 Town, which is separate from Phase 9 Prism.')]];
+ return <main className="phase7-page">
+  <section className="phase7-hero"><div className="phase7-hero-inner"><div className="eyebrow">ZAIGHAM PROPERTIES · DHA LAHORE BLOCK DIRECTORY</div><p className="phase7-kicker">Block-level property research and buyer due diligence</p><h1>{data.name} <em>{label}</em></h1><p className="phase7-lead">{data.summary} This page helps you organise a block-specific search; it is not an official inventory or confirmation of live listings.</p><div className="phase7-actions"><a className="btn-primary" href={WA+encodeURIComponent(message)} target="_blank" rel="noreferrer"><MessageCircle size={17}/> Ask about {label}<ArrowUpRight size={17}/></a><Link className="btn-secondary" to={data.guide}>View complete phase guide <ArrowUpRight size={17}/></Link></div><div className="phase7-hero-meta"><span><MapPin size={15}/> Lahore, Pakistan</span><span><Building2 size={15}/> Residential & commercial research</span><span><ShieldCheck size={15}/> Verify before purchase</span></div></div></section>
+  <nav className="phase7-toc" aria-label="On this page"><a href="#overview">Overview</a><a href="#directory">Directory</a><a href="#checks">Buyer checks</a><a href="#faq">FAQs</a></nav>
+  <section className="section phase7-section" id="overview"><div className="phase7-heading"><span>01 / AREA OVERVIEW</span><h2>Researching {label} in <em>{data.name}</em></h2><p>Block names help narrow a property search, but they do not replace verification of the exact plot number, street, category, location or current DHA record. Treat every listing as an individual case.</p></div><div className="phase7-overview-grid"><article><b>For home buyers</b><p>Compare plot dimensions, street environment, access, nearby facilities and the cost of construction or renovation.</p></article><article><b>For investors</b><p>Compare recent like-for-like evidence, demand, resale liquidity, holding costs and the property's legal status.</p></article><article><b>For commercial buyers</b><p>Where a commercial property is relevant, confirm approved commercial designation, permitted use, frontage, access and parking.</p></article></div></section>
+  <section className="section phase7-section phase7-alt" id="directory"><div className="phase7-heading"><span>02 / {data.unit.toUpperCase()} DIRECTORY</span><h2>Explore other {data.unit.toLowerCase()}s in <em>{data.name}</em></h2><p>Move between the available {data.unit.toLowerCase()} guides. Each page uses the same verification-first framework.</p></div><div className="phase7-block-grid">{data.items.map((item,i)=><article key={item}><span>{data.unit.toUpperCase()}</span><b>{item}</b><p>Review location, plot category, documents, possession and current comparable property evidence.</p><Link to={base+prefix+'-'+slug(item)+'/'}>Explore {data.unit} {item} <ArrowUpRight size={14}/></Link></article>)}</div></section>
+  <section className="section phase7-section" id="checks"><div className="phase7-heading"><span>03 / BUYER DUE DILIGENCE</span><h2>What to verify before buying in <em>{label}</em></h2><p>Use this checklist before making an offer or transferring funds.</p></div><div className="phase7-overview-grid">{checks.map((item,i)=><article key={i}><b><FileCheck2 size={17}/> Check {i+1}</b><p>{item}</p></article>)}</div><div className="phase7-note"><b>Price and availability:</b> No current price or listing is guaranteed on this page. Request a written, date-stamped quote for the exact plot and independently verify it before making a decision.</div></section>
+  <section className="section phase7-section phase7-alt" id="faq"><div className="phase7-heading"><span>04 / FREQUENTLY ASKED QUESTIONS</span><h2>{label} <em>FAQs</em></h2></div><div className="phase7-overview-grid">{faqs.map(([q,a])=><article key={q}><b>{q}</b><p>{a}</p></article>)}</div></section>
+  <section className="section phase7-final-cta"><div><span className="eyebrow">ZAIGHAM PROPERTIES · DHA LAHORE</span><h2>Need help checking {label}?</h2><p>Share the plot size, number and documents you have. We can help you prepare the right questions before proceeding.</p></div><a className="btn-primary" href={WA+encodeURIComponent(message)} target="_blank" rel="noreferrer">Discuss on WhatsApp <ArrowUpRight size={16}/></a></section>
+  <p className="phase7-disclaimer">This guide is general property information, not legal, financial or valuation advice. DHA rules, availability, prices, possession and transfer requirements can change. Confirm all details directly with DHA Lahore and qualified professionals.</p>
+ </main>;
+}
