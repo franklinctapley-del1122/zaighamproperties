@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "project": "Zaigham Properties",
+  "market": "DHA Lahore",
+  "currency": "PKR",
+  "lastUpdated": null,
+  "records": [],
+  "recordFields": {
+    "date": "YYYY-MM-DD",
+    "market": "DHA Lahore or named DHA city",
+    "phase": "Phase / Town / area",
+    "block": "Optional block or sector",
+    "plotNumber": "Optional; private unless approved for publication",
+    "size": "e.g. 5 Marla, 10 Marla, 1 Kanal",
+    "propertyType": "Residential | Commercial | House | Plot | File",
+    "fileCategory": "Allocation | Affidavit | Barcode | Ballot etc.",
+    "status": "File | Allocation | Affidavit | Possession plot | Constructed property",
+    "investorRatePKR": "Optional numeric value",
+    "clientDemandPKR": "Optional numeric value",
+    "askingRatePKR": "Optional numeric value",
+    "confirmedDealRatePKR": "Optional numeric value; only when actual deal is confirmed",
+    "rateBasis": "Asking | Investor offer | Client demand | Confirmed deal | Estimated range",
+    "confidence": "User-confirmed | Independently checked | Indicative | Unverified",
+    "trend": "Rising | Falling | Stable | Mixed | Unknown",
+    "marketNote": "User's explanation/context",
+    "pairTrail": {
+      "baseValuePKR": null,
+      "pairDemandPKR": null,
+      "trailCount": null,
+      "notes": ""
+    },
+    "source": "User update / document / independently checked source",
+    "publishable": false
+  },
+  "rules": [
+    "Append new dated records; never overwrite historical records.",
+    "Keep investor offer, client demand, asking rate and confirmed deal rate separate.",
+    "Never label an indicative rate as a confirmed transaction.",
+    "Keep plot numbers and client-specific details private unless explicitly approved for publication.",
+    "Pair and trail premiums are case-specific and never guaranteed.",
+    "Existing website rate figures are not automatically imported as verified historical records."
+  ]
+}
