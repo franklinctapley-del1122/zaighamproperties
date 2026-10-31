@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { MapPin, MessageCircle, ArrowRight, ShieldCheck, Building2, Route, FileCheck2, Trees } from 'lucide-react';
 
@@ -30,7 +31,7 @@ export default function PhaseNineGuide(){
    </div>
   </section>
   <section id="prism-sectors" className="phase7-section phase7-alt"><p className="phase9-kicker">SECTOR DIRECTORY</p><h2>Phase 9 Prism Sectors</h2><p>The source material lists the following sector labels. Always match the sector and plot number against an authentic, current DHA map before a transaction.</p>
-   <div className="phase9-sector-grid">{sectors.map((s,i)=><motion.div key={s} className="phase9-sector-card" initial={{opacity:0,y:12}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.025}}><span>SECTOR</span><strong>{s}</strong><a href={enquiry('Please share DHA Phase 9 Prism Sector '+s+' available plots and current rates.')}>Enquire <ArrowRight size={14}/></a></motion.div>)}</div>
+   <div className="phase9-sector-grid">{sectors.map((s,i)=><motion.div key={s} className="phase9-sector-card" initial={{opacity:0,y:12}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.025}}><span>SECTOR</span><strong>{s}</strong><Link to={'/dha-lahore/phase-9/sector/'+s.toLowerCase()+'/'}>View sector guide <ArrowRight size={14}/></Link></motion.div>)}</div>
   </section>
   <section className="phase7-section"><p className="phase9-kicker">PLOT CATEGORIES</p><h2>Residential & Commercial Plot Sizes</h2>
    <div className="phase7-table-wrap"><table className="phase7-table"><thead><tr><th>Plot size</th><th>Category</th><th>What to verify</th></tr></thead><tbody>{sizes.map(([size,type])=><tr key={size+type}><td>{size}</td><td>{type}</td><td>Sector availability, plot status, location and applicable dues</td></tr>)}</tbody></table></div>
