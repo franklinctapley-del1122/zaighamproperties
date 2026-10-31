@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, MessageCircle, ArrowRight, ShieldCheck, Building2, Trees, Route, FileCheck2 } from 'lucide-react';
 
@@ -51,7 +52,7 @@ export default function PhaseNineTownGuide() {
     <section id="phase9-blocks" className="phase7-section phase7-alt">
       <p className="phase9-kicker">BLOCK-BY-BLOCK GUIDE</p><h2>Explore Blocks A–E</h2>
       <p>Availability varies by block and individual plot. Treat the sizes below as a guide from the supplied source, not a live inventory.</p>
-      <div className="phase7-card-grid">{blocks.map((b,i)=><motion.article key={b.name} className="phase7-info-card" initial={{opacity:0,y:14}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.05}}><span className="phase9-block-no">0{i+1}</span><h3>{b.name}</h3><strong>{b.plots}</strong><p>{b.note}</p><a href={wa('Please share available verified plots in DHA Phase 9 Town '+b.name+'.')}>Ask about this block <ArrowRight size={15}/></a></motion.article>)}</div>
+      <div className="phase7-card-grid">{blocks.map((b,i)=><motion.article key={b.name} className="phase7-info-card" initial={{opacity:0,y:14}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.05}}><span className="phase9-block-no">0{i+1}</span><h3>{b.name}</h3><strong>{b.plots}</strong><p>{b.note}</p><Link to={'/dha-lahore/phase-9-town/block/'+b.name.toLowerCase().replace('block ','')+'/'}>View block guide <ArrowRight size={15}/></Link></motion.article>)}</div>
     </section>
 
     <section className="phase7-section">
