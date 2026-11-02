@@ -105,7 +105,7 @@ function Properties(){
     {filtered.map(item=><article className="listing-card" key={item.id}>
      <div style={{height:9,background:'linear-gradient(90deg,#173b30,#c6a36b)'}}/>
      <div className="listing-content">
-      <span className="pill">{item.phase}</span>
+      <span className="pill">{item.phase}</span> <span className="pill" style={{marginLeft:6}}>{item.propertyType||"Plot opportunity"}</span>
       <div className="muted"><MapPin size={14}/> Block {item.block}</div>
       <h3>Plot {item.plot}</h3>
       <p>{item.size||'Plot size to be confirmed'}{item.pair?' · Pair opportunity':''}</p>
