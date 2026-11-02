@@ -1,0 +1,122 @@
+{
+  "updatedFromUserMessage": true,
+  "inventory": [
+    {
+      "id": "p7-u-1063-64",
+      "phase": "DHA Phase 7",
+      "block": "U",
+      "plot": "1063 + 64",
+      "quote": "1125",
+      "size": "Not specified"
+    },
+    {
+      "id": "p7-y-1794",
+      "phase": "DHA Phase 7",
+      "block": "Y",
+      "plot": "1794",
+      "quote": "255"
+    },
+    {
+      "id": "p7-w-757",
+      "phase": "DHA Phase 7",
+      "block": "W",
+      "plot": "757",
+      "quote": "565"
+    },
+    {
+      "id": "p7-w-860",
+      "phase": "DHA Phase 7",
+      "block": "W",
+      "plot": "860",
+      "quote": "560"
+    },
+    {
+      "id": "p7-w-1170",
+      "phase": "DHA Phase 7",
+      "block": "W",
+      "plot": "1170",
+      "quote": "575"
+    },
+    {
+      "id": "p7-w-1439",
+      "phase": "DHA Phase 7",
+      "block": "W",
+      "plot": "1439",
+      "quote": "675",
+      "size": "28 Marla"
+    },
+    {
+      "id": "p7-z-1230",
+      "phase": "DHA Phase 7",
+      "block": "Z",
+      "plot": "1230",
+      "quote": "310"
+    },
+    {
+      "id": "p7-y-438",
+      "phase": "DHA Phase 7",
+      "block": "Y",
+      "plot": "438",
+      "quote": "550",
+      "notes": [
+        "NDC ready"
+      ]
+    },
+    {
+      "id": "p7-y-3210",
+      "phase": "DHA Phase 7",
+      "block": "Y",
+      "plot": "3210",
+      "quote": "390"
+    },
+    {
+      "id": "p7-z-117",
+      "phase": "DHA Phase 7",
+      "block": "Z",
+      "plot": "117",
+      "quote": "500"
+    },
+    {
+      "id": "p7-z-700",
+      "phase": "DHA Phase 7",
+      "block": "Z",
+      "plot": "700",
+      "quote": "510"
+    },
+    {
+      "id": "p7-x-832",
+      "phase": "DHA Phase 7",
+      "block": "X",
+      "plot": "832",
+      "quote": "535"
+    },
+    {
+      "id": "p9p-d-703-704",
+      "phase": "DHA Phase 9 Prism",
+      "block": "D",
+      "plot": "703 + 704",
+      "quote": "650",
+      "size": "1 Kanal pair",
+      "pair": true
+    },
+    {
+      "id": "p8-ivy-z3-229",
+      "phase": "DHA Phase 8 · Ivy Green",
+      "block": "Z3",
+      "plot": "229",
+      "quote": "205",
+      "notes": [
+        "Park-facing"
+      ]
+    },
+    {
+      "id": "p8-ivy-z1-86-87",
+      "phase": "DHA Phase 8 · Ivy Green",
+      "block": "Z1",
+      "plot": "86 + 87",
+      "quote": "640 Lac",
+      "size": "1 Kanal pair",
+      "pair": true
+    }
+  ]
+}
