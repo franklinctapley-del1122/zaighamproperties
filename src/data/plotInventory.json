@@ -117,6 +117,89 @@
       "quote": "640 Lac",
       "size": "1 Kanal pair",
       "pair": true
+    },
+    {
+      "id": "p7-v-50",
+      "phase": "DHA Phase 7",
+      "block": "V",
+      "plot": "50",
+      "quote": "550 Lac",
+      "size": "Not specified",
+      "propertyType": "Residential Plot"
+    },
+    {
+      "id": "p7-x-1066-67",
+      "phase": "DHA Phase 7",
+      "block": "X",
+      "plot": "1066 + 67",
+      "quote": "1,025 Lac",
+      "size": "Pair listing",
+      "pair": true,
+      "propertyType": "Residential Plot"
+    },
+    {
+      "id": "p7-y-1723-24",
+      "phase": "DHA Phase 7",
+      "block": "Y",
+      "plot": "1723 + 24",
+      "quote": "825 Lac",
+      "size": "Pair listing",
+      "pair": true,
+      "propertyType": "Residential Plot"
+    },
+    {
+      "id": "p9p-g-622",
+      "phase": "DHA Phase 9 Prism",
+      "block": "G",
+      "plot": "622",
+      "quote": "435 Lac",
+      "size": "22 Marla",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "Corner",
+        "80 ft road",
+        "Main ki back"
+      ]
+    },
+    {
+      "id": "p9p-n-57-58-commercial",
+      "phase": "DHA Phase 9 Prism",
+      "block": "N",
+      "plot": "57 + 58",
+      "quote": "650 Lac",
+      "size": "4 + 4 Marla pair",
+      "pair": true,
+      "propertyType": "Commercial",
+      "notes": [
+        "Commercial pair"
+      ]
+    },
+    {
+      "id": "p8-w-845",
+      "phase": "DHA Phase 8",
+      "block": "W",
+      "plot": "845",
+      "quote": "750 Lac",
+      "size": "Not specified",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "Main Broadway Road",
+        "Two-side open",
+        "Paper available"
+      ]
+    },
+    {
+      "id": "p8-broadway-c-192",
+      "phase": "DHA Phase 8 · Broadway Commercial",
+      "block": "C",
+      "plot": "192",
+      "quote": "20 Crore",
+      "size": "Not specified",
+      "propertyType": "Commercial",
+      "notes": [
+        "Corner",
+        "Main ki back"
+      ]
     }
   ]
 }
