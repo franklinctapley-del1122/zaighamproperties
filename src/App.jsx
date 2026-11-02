@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import marketLedger from './data/marketLedger.json';
+import plotInventory from './data/plotInventory.json';
 import PhaseNineTownGuide from './PhaseNineTownGuide';
 import PhaseNineGuide from './PhaseNineGuide';
 import BlockDetail from './BlockDetail';
@@ -82,7 +83,43 @@ function Home(){
   <section className="lux-section lux-guides-location"><div className="lux-section-heading"><div><span className="lux-kicker dark-kicker">LOCAL KNOWLEDGE</span><h2>Explore, research <em>and visit.</em></h2></div><Link to="/guides" className="lux-text-link">All property guides <ArrowUpRight size={16}/></Link></div><div className="lux-guide-map-grid"><div className="lux-guides-list">{guides.map((g,i)=><Link to={g[2]} key={g[0]}><span>0{i+1}</span><div><b>{g[0]}</b><small>{g[1]}</small></div><ArrowUpRight size={17}/></Link>)}<div className="lux-location-note"><MapPin/><span><b>Focused on DHA Lahore</b><small>Serving property enquiries across Lahore, Pakistan. Office address available on confirmation.</small></span></div></div><div className="lux-map-frame"><iframe title="Map showing DHA Lahore, Pakistan" src="https://maps.google.com/maps?q=DHA%20Lahore%2C%20Pakistan&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/><a href="https://www.google.com/maps/search/?api=1&query=DHA+Lahore+Pakistan" target="_blank" rel="noreferrer">Open DHA Lahore in Google Maps <ArrowUpRight size={14}/></a></div></div></section>
  </motion.div>
 }
-function Properties(){const q=new URLSearchParams(useLocation().search);const[type,setType]=useState(q.get('type')||'All types'),[phase,setPhase]=useState(q.get('phase')||'All phases'),[query,setQuery]=useState('');const visible=listings.filter(x=>(type==='All types'||x.type===type)&&(phase==='All phases'||x.phase===phase)&&[x.name,x.phase,x.type,x.size].join(' ').toLowerCase().includes(query.toLowerCase()));return <><PageIntro eyebrow="PROPERTY SEARCH" title={<>Explore DHA Lahore <em>properties.</em></>} desc="Browse residential homes, plots and commercial property enquiries across DHA Lahore. Confirm availability, location and documentation before making a decision."/><section className="section"><div className="rates-toolbar"><label className="rate-search"><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search property, phase or size"/></label><label className="rate-select"><select value={type} onChange={e=>setType(e.target.value)}>{['All types','House','Plot','Commercial'].map(x=><option key={x}>{x}</option>)}</select></label><label className="rate-select"><select value={phase} onChange={e=>setPhase(e.target.value)}>{['All phases',...phases.map(x=>x[0])].map(x=><option key={x}>{x}</option>)}</select></label><button className="btn outline" onClick={()=>{setType('All types');setPhase('All phases');setQuery('')}}>Reset</button></div><div className="card-grid">{visible.map(x=><ListingCard key={x.name} item={x}/>)}</div>{!visible.length&&<p>No properties match these filters.</p>}</section></>}
+function Properties(){
+ const q=new URLSearchParams(useLocation().search);
+ const [phase,setPhase]=useState(q.get('phase')||'All phases');
+ const [block,setBlock]=useState('All blocks');
+ const [query,setQuery]=useState('');
+ const phaseOptions=[...new Set(plotInventory.map(x=>x.phase))];
+ const filtered=plotInventory.filter(x=>(phase==='All phases'||x.phase===phase)&&(block==='All blocks'||x.block===block)&&[x.phase,x.block,x.plot,x.size||'',...(x.notes||[])].join(' ').toLowerCase().includes(query.toLowerCase()));
+ const blockOptions=[...new Set(plotInventory.filter(x=>phase==='All phases'||x.phase===phase).map(x=>x.block))];
+ return <>
+  <PageIntro eyebrow="CURRENT PLOT INVENTORY · DHA LAHORE" title={<>Selected DHA Lahore <em>plot opportunities.</em></>} desc="Browse the plot references currently shared with Zaigham Properties across DHA Phase 7, Phase 8 Ivy Green and DHA Phase 9 Prism. Contact our team to reconfirm live availability, exact location, documentation and the latest seller quote."/>
+  <section className="section">
+   <div className="rates-summary"><div><span className="eyebrow">ZAIGHAM PROPERTIES · PRIVATE ENQUIRY INVENTORY</span><h2>Available plot <em>references.</em></h2><p>Inventory is subject to change. A listing is not a confirmed offer until availability and terms are reconfirmed directly.</p></div><div className="rates-total"><b>{filtered.length}</b><span>matching plot references</span></div></div>
+   <div className="rates-toolbar" style={{gridTemplateColumns:'2fr 1fr 2fr auto'}}>
+    <label className="rate-search"><span>⌕</span><input aria-label="Search plot inventory" value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search phase, block or plot number"/></label>
+    <label className="rate-select"><span>PHASE</span><select value={phase} onChange={e=>{setPhase(e.target.value);setBlock('All blocks')}}>{['All phases',...phaseOptions].map(x=><option key={x}>{x}</option>)}</select></label>
+    <label className="rate-select"><span>BLOCK</span><select value={block} onChange={e=>setBlock(e.target.value)}>{['All blocks',...blockOptions].map(x=><option key={x}>{x}</option>)}</select></label>
+    <button className="btn outline" onClick={()=>{setPhase('All phases');setBlock('All blocks');setQuery('')}}>Reset</button>
+   </div>
+   <div className="card-grid" style={{marginTop:28}}>
+    {filtered.map(item=><article className="listing-card" key={item.id}>
+     <div style={{height:9,background:'linear-gradient(90deg,#173b30,#c6a36b)'}}/>
+     <div className="listing-content">
+      <span className="pill">{item.phase}</span>
+      <div className="muted"><MapPin size={14}/> Block {item.block}</div>
+      <h3>Plot {item.plot}</h3>
+      <p>{item.size||'Plot size to be confirmed'}{item.pair?' · Pair opportunity':''}</p>
+      {(item.notes||[]).map(note=><span key={note} className="category-chip" style={{display:'inline-block',margin:'4px 5px 0 0'}}>{note}</span>)}
+      <div className="listing-meta"><span><LandPlot size={15}/> {item.pair?'Pair listing':'Plot opportunity'}</span><b>Quote: {item.quote}</b></div>
+      <a className="inline-link" href={wa('Assalam o Alaikum, I am enquiring about '+item.phase+', Block '+item.block+', Plot '+item.plot+'. The listed quote is '+item.quote+'. Please confirm current availability, size, exact location and final terms.')} target="_blank" rel="noreferrer">Enquire on WhatsApp <ArrowUpRight size={15}/></a>
+     </div>
+    </article>)}
+   </div>
+   {!filtered.length&&<p className="rates-empty">No plot references match these filters. Try another phase or block.</p>}
+   <div className="notice" style={{marginTop:32}}><ShieldCheck/><p><b>Inventory and price note:</b> Plot numbers, blocks, pair references and quoted figures are displayed as supplied to Zaigham Properties. Units/currency have not been added where they were not specified. Availability, ownership, plot dimensions, possession status, dues, NDC, transfer eligibility and final price must be independently reconfirmed before any commitment or payment.</p></div>
+  </section>
+ </>;
+}
 function FileRates(){
  const [phase,setPhase]=useState('All DHA Lahore Phases'),[size,setSize]=useState('All sizes'),[type,setType]=useState('All types'),[query,setQuery]=useState('');
  const phasesList=[...new Set(rates.map(r=>r[0]))];
