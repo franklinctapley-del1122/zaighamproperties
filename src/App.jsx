@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import marketLedger from './data/marketLedger.json';
 import plotInventory from './data/plotInventory.json';
+const inventory = Array.isArray(plotInventory) ? plotInventory : (plotInventory && Array.isArray(plotInventory.inventory) ? plotInventory.inventory : []);
 import PhaseNineTownGuide from './PhaseNineTownGuide';
 import PhaseNineGuide from './PhaseNineGuide';
 import BlockDetail from './BlockDetail';
@@ -88,9 +89,9 @@ function Properties(){
  const [phase,setPhase]=useState(q.get('phase')||'All phases');
  const [block,setBlock]=useState('All blocks');
  const [query,setQuery]=useState('');
- const phaseOptions=[...new Set(plotInventory.map(x=>x.phase))];
- const filtered=plotInventory.filter(x=>(phase==='All phases'||x.phase===phase)&&(block==='All blocks'||x.block===block)&&[x.phase,x.block,x.plot,x.size||'',...(x.notes||[])].join(' ').toLowerCase().includes(query.toLowerCase()));
- const blockOptions=[...new Set(plotInventory.filter(x=>phase==='All phases'||x.phase===phase).map(x=>x.block))];
+ const phaseOptions=[...new Set(inventory.map(x=>x.phase))];
+ const filtered=inventory.filter(x=>(phase==='All phases'||x.phase===phase)&&(block==='All blocks'||x.block===block)&&[x.phase,x.block,x.plot,x.size||'',...(x.notes||[])].join(' ').toLowerCase().includes(query.toLowerCase()));
+ const blockOptions=[...new Set(inventory.filter(x=>phase==='All phases'||x.phase===phase).map(x=>x.block))];
  return <>
   <PageIntro eyebrow="CURRENT PLOT INVENTORY · DHA LAHORE" title={<>Selected DHA Lahore <em>plot opportunities.</em></>} desc="Browse the plot references currently shared with Zaigham Properties across DHA Phase 7, Phase 8 Ivy Green and DHA Phase 9 Prism. Contact our team to reconfirm live availability, exact location, documentation and the latest seller quote."/>
   <section className="section">
