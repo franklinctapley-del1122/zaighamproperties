@@ -17,8 +17,9 @@ const listings=[
 ];
 const formatMarketRate = value => {
  const lac = value / 100000;
- if (lac >= 100) return (lac / 100).toFixed(2).replace(/\\.?0+$/,'') + ' Cr';
- return lac.toFixed(2).replace(/\\.?0+$/,'') + ' Lac';
+ const compact = n => String(Number(n.toFixed(2)));
+ if (lac >= 100) return compact(lac / 100) + ' Cr';
+ return compact(lac) + ' Lac';
 };
 const rates = marketLedger.records
  .filter(r => r.market === 'DHA Lahore')
