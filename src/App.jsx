@@ -106,7 +106,7 @@ function Properties(){
    </div>
    <div className="card-grid" style={{marginTop:28,marginBottom:24}}>
     {houseInventory.listings.filter(x=>x.listingType==='house').map(item=><Link to={'/properties/'+item.id} className="listing-card" key={item.id} style={{textDecoration:'none',color:'inherit'}}>
-     <div style={{height:240,background:'#e9e6df',overflow:'hidden'}}><img src={item.images?.[0]?.path} alt={'Front elevation of '+item.plotSize+' house in '+item.phase+', '+item.block+' Block'} style={{width:'100%',height:'100%',objectFit:'cover'}} onError={e=>{e.currentTarget.style.display='none'}}/></div>
+     <div style={{height:240,background:'#e9e6df',overflow:'hidden'}}><img src={item.images?.find(photo=>photo.role==='front-elevation')?.path || item.images?.[0]?.path} alt={'Front elevation of '+item.plotSize+' house in '+item.phase+', '+item.block+' Block'} style={{width:'100%',height:'100%',objectFit:'cover'}} onError={e=>{e.currentTarget.style.display='none'}}/></div>
      <div className="listing-content"><span className="pill">HOUSE FOR SALE</span><div className="muted"><MapPin size={14}/> {item.phase}, {item.block} Block</div><h3>{item.plotSize} Modern Design House</h3><p>{item.description}</p><div className="listing-meta"><span><HomeIcon size={15}/> {item.plotSize}</span><b>{item.demandLabel}</b></div><span className="inline-link">View property details <ArrowUpRight size={15}/></span></div>
     </Link>)}
    </div>
