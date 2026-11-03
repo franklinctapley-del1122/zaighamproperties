@@ -16,6 +16,86 @@
       "features": [],
       "images": [
         {
+          "fileName": "FB_IMG_1793647074812.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647074812.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647077201.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647077201.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647079265.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647079265.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647081858.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647081858.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647083910.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647083910.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647085864.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647085864.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647087723.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647087723.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647090134.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647090134.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647092766.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647092766.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647095281.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647095281.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647097511.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647097511.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647099538.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647099538.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647102476.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647102476.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647104552.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647104552.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647106624.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647106624.jpg"
+        },
+        {
+          "fileName": "FB_IMG_1793647108807.jpg",
+          "role": "property-photo",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647108807.jpg"
+        },
+        {
           "fileName": "FB_IMG_1793647111420.jpg",
           "role": "front-elevation",
           "path": "/images/properties/house-for-sale-001/FB_IMG_1793647111420.jpg"
@@ -24,11 +104,11 @@
       "contact": "03224751952",
       "publishable": false,
       "missingDetails": [
-        "Upload the front elevation image into the listing folder",
         "Bedrooms and bathrooms",
         "Floors and covered area",
         "Kitchen and lounge details",
-        "Additional features and amenities"
+        "Additional features and amenities",
+        "Confirm current demand"
       ]
     }
   ]
