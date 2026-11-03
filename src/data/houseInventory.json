@@ -1,0 +1,35 @@
+{
+  "listings": [
+    {
+      "id": "dha-phase-7-y-block-1-kanal-house-001",
+      "status": "draft",
+      "listingType": "house",
+      "transaction": "for-sale",
+      "market": "DHA Lahore",
+      "phase": "DHA Phase 7",
+      "block": "Y",
+      "propertyType": "Modern Design House",
+      "plotSize": "1 Kanal",
+      "demand": null,
+      "demandLabel": "Call for Price",
+      "description": "Modern-design 1 Kanal house for sale in DHA Phase 7, Y Block, Lahore. Contact Zaigham Properties for price and further details.",
+      "features": [],
+      "images": [
+        {
+          "fileName": "FB_IMG_1793647111420.jpg",
+          "role": "front-elevation",
+          "path": "/images/properties/house-for-sale-001/FB_IMG_1793647111420.jpg"
+        }
+      ],
+      "contact": "03224751952",
+      "publishable": false,
+      "missingDetails": [
+        "Upload the front elevation image into the listing folder",
+        "Bedrooms and bathrooms",
+        "Floors and covered area",
+        "Kitchen and lounge details",
+        "Additional features and amenities"
+      ]
+    }
+  ]
+}
