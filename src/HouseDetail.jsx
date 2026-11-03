@@ -42,7 +42,7 @@ export default function HouseDetail(){
       <div><div style={{fontSize:13,color:'#777',marginBottom:10}}><Link to="/properties">Properties</Link> / DHA Phase 7 / Y Block</div><h1 style={{fontFamily:'Georgia,serif',fontSize:'clamp(34px,5vw,58px)',lineHeight:1.08,margin:'0 0 14px',color:'#14251f'}}>Modern 1 Kanal House <i style={{color:'#a8844d'}}>for Sale.</i></h1><div style={{display:'flex',gap:8,alignItems:'center',color:'#666'}}><MapPin size={16}/> Y Block, DHA Phase 7, Lahore</div></div>
       <a href={whatsapp} target="_blank" rel="noreferrer" style={{display:'inline-flex',alignItems:'center',gap:10,background:'#173b30',color:'#fff',padding:'15px 22px',textDecoration:'none',fontWeight:700}}>Call for Demand <ArrowUpRight size={17}/></a>
     </div>
-    <div style={{display:'grid',gridTemplateColumns:'minmax(0,1.7fr) minmax(260px,1fr)',gap:18,alignItems:'stretch'}}>
+    <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',gap:18,alignItems:'stretch'}}>
       <div style={{minWidth:0}}>
         <div style={{background:'#e9e6df',height:'clamp(300px,48vw,590px)',position:'relative',overflow:'hidden'}}>
           <img key={photos[activePhoto].src} src={photos[activePhoto].src} alt={photos[activePhoto].alt} onError={e=>{e.currentTarget.style.display='none';}} style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/>
