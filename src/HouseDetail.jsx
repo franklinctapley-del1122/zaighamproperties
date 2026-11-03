@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {MapPin, Home, Ruler, BedDouble, Bath, MessageCircle, ArrowUpRight, ShieldCheck} from 'lucide-react';
 
@@ -6,10 +6,27 @@ const WA = '923224751952';
 const message = 'Assalam o Alaikum, I am interested in the 1 Kanal modern-design house for sale in DHA Phase 7, Y Block. Please share the demand and complete details.';
 const whatsapp = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(message);
 const photos = [
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647074812.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647077201.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647079265.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647081858.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647083910.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647085864.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647087723.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647090134.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647092766.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647095281.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647097511.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647099538.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647102476.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647104552.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647106624.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
+  {src:'/images/properties/house-for-sale-001/FB_IMG_1793647108807.jpg', alt:'Interior and property photograph of a modern 1 Kanal house in DHA Phase 7 Y Block'},
   {src:'/images/properties/house-for-sale-001/FB_IMG_1793647111420.jpg', alt:'Front elevation of a modern 1 Kanal house in DHA Phase 7 Y Block'}
 ];
 
 export default function HouseDetail(){
+  const [activePhoto,setActivePhoto] = useState(16);
   useEffect(()=>{
     document.title='1 Kanal Modern House for Sale in DHA Phase 7 Y Block Lahore | Zaigham Properties';
     let meta=document.querySelector('meta[name="description"]');
@@ -26,9 +43,16 @@ export default function HouseDetail(){
       <a href={whatsapp} target="_blank" rel="noreferrer" style={{display:'inline-flex',alignItems:'center',gap:10,background:'#173b30',color:'#fff',padding:'15px 22px',textDecoration:'none',fontWeight:700}}>Call for Demand <ArrowUpRight size={17}/></a>
     </div>
     <div style={{display:'grid',gridTemplateColumns:'minmax(0,1.7fr) minmax(260px,1fr)',gap:18,alignItems:'stretch'}}>
-      <div style={{background:'#e9e6df',minHeight:300,position:'relative',overflow:'hidden'}}>
-        <img src={photos[0].src} alt={photos[0].alt} onError={e=>{e.currentTarget.style.display='none';}} style={{width:'100%',height:'100%',minHeight:300,maxHeight:600,objectFit:'cover',display:'block'}}/>
-        <div style={{position:'absolute',left:16,bottom:16,background:'rgba(20,37,31,.9)',color:'#fff',padding:'9px 13px',fontSize:12,letterSpacing:1}}>FRONT ELEVATION</div>
+      <div style={{minWidth:0}}>
+        <div style={{background:'#e9e6df',height:'clamp(300px,48vw,590px)',position:'relative',overflow:'hidden'}}>
+          <img key={photos[activePhoto].src} src={photos[activePhoto].src} alt={photos[activePhoto].alt} onError={e=>{e.currentTarget.style.display='none';}} style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/>
+          <div style={{position:'absolute',left:16,bottom:16,background:'rgba(20,37,31,.9)',color:'#fff',padding:'9px 13px',fontSize:12,letterSpacing:1}}>{activePhoto===16?'FRONT ELEVATION':'PROPERTY PHOTO'} · {activePhoto+1} / {photos.length}</div>
+        </div>
+        <div aria-label="House photo gallery" style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(82px,1fr))',gap:8,marginTop:10}}>
+          {photos.map((photo,index)=><button key={photo.src} type="button" onClick={()=>setActivePhoto(index)} aria-label={'View property photo '+(index+1)} style={{padding:0,border:activePhoto===index?'3px solid #c6a36b':'2px solid transparent',background:'#e9e6df',height:76,overflow:'hidden',cursor:'pointer'}}>
+            <img src={photo.src} alt="" loading="lazy" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/>
+          </button>)}
+        </div>
       </div>
       <aside style={{background:'#f5f3ee',padding:'clamp(22px,4vw,38px)',display:'flex',flexDirection:'column',justifyContent:'space-between',gap:24}}>
         <div><div style={{fontSize:11,letterSpacing:2,color:'#a8844d',fontWeight:700}}>PROPERTY OVERVIEW</div><h2 style={{fontFamily:'Georgia,serif',fontSize:30,color:'#14251f',margin:'12px 0 22px'}}>A modern family residence in DHA Lahore.</h2>
