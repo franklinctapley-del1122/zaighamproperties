@@ -48,7 +48,21 @@ function Home(){
  const phaseNames=Array.from({length:13},(_,i)=>'DHA Phase '+(i+1));
  const sizes=['Any size','5 Marla','7 Marla','8 Marla','10 Marla','1 Kanal','2 Kanal'];
  const goSearch=()=>{const params=new URLSearchParams({type:filters.type,phase:filters.phase,size:filters.size,purpose:filters.purpose});window.location.href='/properties?'+params.toString()};
- const residential=listings.filter(x=>x.type!=='Commercial');
+ const featuredHouseRecord = houseInventory.listings.find(x=>x.id==='dha-phase-7-y-block-1-kanal-house-001');
+ const residential = [
+  ...(featuredHouseRecord ? [{
+   id:featuredHouseRecord.id,
+   isLiveHouse:true,
+   type:'House',
+   name:'Modern 1 Kanal House for Sale',
+   phase:'DHA Phase 7 · Y Block',
+   size:'1 Kanal',
+   price:'Call for price',
+   img:featuredHouseRecord.images?.find(photo=>photo.role==='front-elevation')?.path || featuredHouseRecord.images?.[0]?.path,
+   desc:'Modern-design family residence in Y Block, DHA Phase 7, Lahore.'
+  }] : []),
+  ...listings.filter(x=>x.type!=='Commercial').slice(1)
+ ];
  const commercial=listings.filter(x=>x.type==='Commercial');
  const latestRates=rates.filter(r=>(ratePhase==='All phases'||r[0].includes(ratePhase))&&(rateType==='All types'||r[2]===rateType)).slice(0,6);
  const values=[{title:'Local DHA Lahore focus',copy:'Focused research across DHA Lahore phases, blocks and property categories.',icon:<MapPin/>},{title:'Clear property conversations',copy:'Understand what is known, what needs checking and which questions to ask next.',icon:<MessageCircle/>},{title:'Verification comes first',copy:'Confirm ownership, dues, location and documents with the relevant authority before payment.',icon:<ShieldCheck/>}];
@@ -65,7 +79,7 @@ function Home(){
   {/* 05 · PHASES */}
   <section className="lux-section lux-phases-section"><div className="lux-section-heading"><div><span className="lux-kicker dark-kicker">EXPLORE THE COMMUNITY</span><h2>Discover DHA Lahore <em>phase by phase.</em></h2></div><Link className="lux-text-link" to="/dha-lahore">View phase guide <ArrowUpRight size={16}/></Link></div><div className="lux-phase-grid">{phaseNames.map((name,i)=><Link to={'/dha-lahore/'+(i===8?'phase-9':'phase-'+(i+1))} className="lux-phase-card" key={name}><span className="lux-phase-number">{String(i+1).padStart(2,'0')}</span><div><b>{i===8?'DHA Phase 9 Prism':name}</b><small>Explore area guide</small></div><ArrowUpRight size={17}/></Link>)}<Link to="/dha-lahore/phase-9-town" className="lux-phase-card" key="phase-9-town"><span className="lux-phase-number">09T</span><div><b>DHA Phase 9 Town</b><small>Explore Town area guide</small></div><ArrowUpRight size={17}/></Link></div></section>
   {/* 06 · RESIDENTIAL */}
-  <section className="lux-section lux-feature-section"><div className="lux-section-heading"><div><span className="lux-kicker dark-kicker">RESIDENTIAL PROPERTY</span><h2>Residential property <em>requirements.</em></h2><p>Explore the types of residential property enquiries we can help assess. These are illustrative examples, not confirmed live listings; availability and asking prices must be checked.</p></div><Link className="lux-text-link" to="/properties">Browse residential <ArrowUpRight size={16}/></Link></div><div className="lux-property-grid">{residential.map((item,i)=><article className="lux-property-card" key={item.name}><div className="lux-property-photo"><img src={item.img} alt={item.type+' in '+item.phase+', DHA Lahore'}/><span>{item.type==='House'?'HOUSE':'RESIDENTIAL PLOT'}</span></div><div className="lux-property-info"><small><MapPin size={13}/>{item.phase}</small><h3>{item.name}</h3><div><span>{item.size}</span><b>Price on request</b></div><a href={wa('Please share current availability and details for '+item.name+' in '+item.phase+'.')}>Request details <ArrowUpRight size={15}/></a></div></article>)}</div></section>
+  <section className="lux-section lux-feature-section"><div className="lux-section-heading"><div><span className="lux-kicker dark-kicker">RESIDENTIAL PROPERTY</span><h2>Residential property <em>requirements.</em></h2><p>Explore the types of residential property enquiries we can help assess. These are illustrative examples, not confirmed live listings; availability and asking prices must be checked.</p></div><Link className="lux-text-link" to="/properties">Browse residential <ArrowUpRight size={16}/></Link></div><div className="lux-property-grid">{residential.map((item,i)=><article className="lux-property-card" key={item.name}><div className="lux-property-photo"><img src={item.img} alt={item.type+' in '+item.phase+', DHA Lahore'}/><span>{item.type==='House'?'HOUSE':'RESIDENTIAL PLOT'}</span></div><div className="lux-property-info"><small><MapPin size={13}/>{item.phase}</small><h3>{item.name}</h3><div><span>{item.size}</span><b>Price on request</b></div>{item.isLiveHouse?<Link to={'/properties/'+item.id}>View property details <ArrowUpRight size={15}/></Link>:<a href={wa('Please share current availability and details for '+item.name+' in '+item.phase+'.')}>Request details <ArrowUpRight size={15}/></a>}</div></article>)}</div></section>
   {/* 07 · COMMERCIAL */}
   <section className="lux-commercial"><div className="lux-commercial-image"/><div className="lux-commercial-copy"><span className="lux-kicker">COMMERCIAL PROPERTY · DHA LAHORE</span><h2>Space for your<br/><em>next opportunity.</em></h2><p>Explore commercial property requirements across DHA Lahore. Compare location, access, size, permitted use and current availability before making an investment decision.</p><div className="lux-commercial-points"><span><Building2/> Commercial plots</span><span><MapPin/> Location-led research</span><span><FileText/> Document checks</span></div><Link className="lux-btn lux-btn-gold" to="/commercial-properties">Explore commercial options <ArrowUpRight size={17}/></Link></div></section>
   {/* 08 · INVESTMENT */}
