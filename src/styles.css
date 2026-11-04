@@ -533,3 +533,12 @@ td,.rate-table td,.aff-table td{font-size:14px;color:#202936;font-weight:500}
 .phase7-disclaimer{padding:25px 8%;font-size:11px;line-height:1.8;color:#66717b;background:#f5f3ed}
 @media(max-width:900px){.phase7-block-grid{grid-template-columns:repeat(3,1fr)}.phase7-overview-grid,.phase7-facility-grid{grid-template-columns:1fr 1fr}.phase7-location-grid{grid-template-columns:1fr}.phase7-toc{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}.phase7-toc a{white-space:nowrap}}
 @media(max-width:600px){.phase7-hero{padding:75px 7%;min-height:620px}.phase7-hero h1{font-size:51px}.phase7-lead{font-size:15px}.phase7-hero-meta{gap:12px;flex-direction:column}.phase7-section,.phase7-location,.phase7-prices{padding:65px 7%}.phase7-block-grid{grid-template-columns:1fr 1fr}.phase7-overview-grid,.phase7-facility-grid,.phase7-rate-grid,.phase7-factor-grid,.phase7-checks{grid-template-columns:1fr}.phase7-rate-grid>div{padding:14px;overflow-x:auto}.phase7-rate-grid table{min-width:390px}.phase7-cta,.phase7-bottom{align-items:flex-start;flex-direction:column}.phase7-bottom{padding:60px 7%}.phase7-toc{top:68px;gap:20px;padding:13px 7%}.phase7-map iframe{height:270px}}
+
+
+/* Homepage hero: cinematic YouTube background */
+.lux-hero{isolation:isolate;overflow:hidden;background:#081525}
+.lux-hero-image{overflow:hidden;background-image:none!important;transform:none!important;animation:none!important}
+.lux-hero-image iframe{position:absolute;top:50%;left:50%;width:max(100%,177.78vh);height:max(100%,56.25vw);min-width:100%;min-height:100%;transform:translate(-50%,-50%);border:0;pointer-events:none}
+.lux-hero-shade{z-index:0;background:linear-gradient(90deg,rgba(5,15,27,.91) 0%,rgba(5,15,27,.72) 48%,rgba(5,15,27,.35) 100%),linear-gradient(0deg,rgba(5,15,27,.34),rgba(5,15,27,.12))}
+.lux-hero-content,.lux-hero-index{z-index:1}
+@media(max-width:700px){.lux-hero{min-height:650px}.lux-hero-image iframe{width:max(100%,177.78vh);height:max(100%,56.25vw)}}
