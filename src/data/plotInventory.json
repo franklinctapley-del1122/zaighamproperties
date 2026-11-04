@@ -200,6 +200,68 @@
         "Corner",
         "Main ki back"
       ]
+    },
+    {
+      "id": "p9p-r-141",
+      "phase": "DHA Phase 9 Prism",
+      "block": "R",
+      "plot": "141",
+      "quote": "310 Lac",
+      "size": "Not specified",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "Direct deal"
+      ]
+    },
+    {
+      "id": "p7-s-778-779",
+      "phase": "DHA Phase 7",
+      "block": "S",
+      "plot": "778 + 779",
+      "quote": "1,200 Lac",
+      "size": "Not specified",
+      "propertyType": "Residential Plot",
+      "pair": true,
+      "notes": [
+        "Direct deal"
+      ]
+    },
+    {
+      "id": "p7-u-1738-1739",
+      "phase": "DHA Phase 7",
+      "block": "U",
+      "plot": "1738 + 1739",
+      "quote": "925 Lac",
+      "size": "Not specified",
+      "propertyType": "Residential Plot",
+      "pair": true,
+      "notes": [
+        "Direct deal"
+      ]
+    },
+    {
+      "id": "p7-y-2707",
+      "phase": "DHA Phase 7",
+      "block": "Y",
+      "plot": "2707",
+      "quote": "410 Lac",
+      "size": "Not specified",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "Direct deal"
+      ]
+    },
+    {
+      "id": "p7-y-1851",
+      "phase": "DHA Phase 7",
+      "block": "Y",
+      "plot": "1851",
+      "quote": "310 Lac",
+      "size": "Not specified",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "Direct deal"
+      ]
     }
   ]
 }
