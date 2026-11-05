@@ -262,6 +262,200 @@
       "notes": [
         "Direct deal"
       ]
+    },
+    {
+      "id": "dha-p1-n-358",
+      "phase": "DHA Phase 1",
+      "block": "N",
+      "plot": "358",
+      "quote": "460 Lac",
+      "propertyType": "Residential Plot"
+    },
+    {
+      "id": "dha-p4-kk-445",
+      "phase": "DHA Phase 4",
+      "block": "KK",
+      "plot": "445",
+      "quote": "325 Lac",
+      "size": "9 Marla",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "Final demand"
+      ]
+    },
+    {
+      "id": "dha-p4-kk-472",
+      "phase": "DHA Phase 4",
+      "block": "KK",
+      "plot": "472",
+      "quote": "316 Lac",
+      "size": "9 Marla",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "Final demand"
+      ]
+    },
+    {
+      "id": "dha-p5-e-120",
+      "phase": "DHA Phase 5",
+      "block": "E",
+      "plot": "120",
+      "quote": "765 Lac",
+      "propertyType": "Residential Plot"
+    },
+    {
+      "id": "dha-p5-m-24",
+      "phase": "DHA Phase 5",
+      "block": "M",
+      "plot": "24",
+      "quote": "390 Lac",
+      "propertyType": "Residential Plot"
+    },
+    {
+      "id": "dha-p6-e-1203",
+      "phase": "DHA Phase 6",
+      "block": "E",
+      "plot": "1203",
+      "quote": "118 Lac",
+      "size": "5 Marla",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "Final demand"
+      ]
+    },
+    {
+      "id": "dha-p7-z-996",
+      "phase": "DHA Phase 7",
+      "block": "Z",
+      "plot": "996",
+      "quote": "510 Lac",
+      "propertyType": "Residential Plot"
+    },
+    {
+      "id": "dha-p7-z-421-422",
+      "phase": "DHA Phase 7",
+      "block": "Z",
+      "plot": "421 + 422",
+      "quote": "1,240 Lac",
+      "propertyType": "Residential Plot",
+      "pair": true
+    },
+    {
+      "id": "dha-p8-s-361",
+      "phase": "DHA Phase 8",
+      "block": "S",
+      "plot": "361",
+      "quote": "470 Lac",
+      "propertyType": "Residential Plot"
+    },
+    {
+      "id": "dha-p8-s-38",
+      "phase": "DHA Phase 8",
+      "block": "S",
+      "plot": "38",
+      "quote": "610 Lac",
+      "size": "25 Marla",
+      "propertyType": "Residential Plot"
+    },
+    {
+      "id": "dha-p8-v-306",
+      "phase": "DHA Phase 8",
+      "block": "V",
+      "plot": "306",
+      "quote": "500 Lac",
+      "propertyType": "Residential Plot"
+    },
+    {
+      "id": "dha-p9p-g-795",
+      "phase": "DHA Phase 9 Prism",
+      "block": "G",
+      "plot": "795",
+      "quote": "330 Lac",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "NDC application submitted / apply"
+      ]
+    },
+    {
+      "id": "dha-p9p-a-570",
+      "phase": "DHA Phase 9 Prism",
+      "block": "A",
+      "plot": "570",
+      "quote": "410 Lac",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "80-ft road"
+      ]
+    },
+    {
+      "id": "dha-p9p-f-111",
+      "phase": "DHA Phase 9 Prism",
+      "block": "F",
+      "plot": "111",
+      "quote": "420 Lac",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "26.5 corner (as supplied)"
+      ]
+    },
+    {
+      "id": "dha-p9p-l-113",
+      "phase": "DHA Phase 9 Prism",
+      "block": "L",
+      "plot": "113",
+      "quote": "325 Lac",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "80-ft corner (as supplied)"
+      ]
+    },
+    {
+      "id": "dha-p9p-m-1120",
+      "phase": "DHA Phase 9 Prism",
+      "block": "M",
+      "plot": "1120",
+      "quote": "240 Lac",
+      "propertyType": "Residential Plot"
+    },
+    {
+      "id": "dha-p9p-m-1184",
+      "phase": "DHA Phase 9 Prism",
+      "block": "M",
+      "plot": "1184",
+      "quote": "225 Lac",
+      "propertyType": "Residential Plot"
+    },
+    {
+      "id": "dha-p9p-r-246",
+      "phase": "DHA Phase 9 Prism",
+      "block": "R",
+      "plot": "246",
+      "quote": "265 Lac",
+      "propertyType": "Residential Plot"
+    },
+    {
+      "id": "dha-p9p-r-2909",
+      "phase": "DHA Phase 9 Prism",
+      "block": "R",
+      "plot": "2909",
+      "quote": "105 Lac",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "5 Marla corner"
+      ]
+    },
+    {
+      "id": "dha-multan-l-790-91-92",
+      "phase": "DHA Multan",
+      "block": "L",
+      "plot": "790 + 91 + 92",
+      "quote": "150 Lac",
+      "size": "3 Kanal",
+      "propertyType": "Residential Plot",
+      "notes": [
+        "Final demand"
+      ],
+      "pair": true
     }
   ]
 }
