@@ -48,7 +48,7 @@ function Home(){
  const phaseNames=Array.from({length:13},(_,i)=>'DHA Phase '+(i+1));
  const sizes=['Any size','5 Marla','7 Marla','8 Marla','10 Marla','1 Kanal','2 Kanal'];
  const goSearch=()=>{const params=new URLSearchParams({type:filters.type,phase:filters.phase,size:filters.size,purpose:filters.purpose});window.location.href='/properties?'+params.toString()};
- const featuredHouseRecord = houseInventory.listings.find(x=>x.id==='dha-phase-7-y-block-1-kanal-house-001');
+ const featuredHouseRecord = houseInventory.listings.find(x=>x.id==='dha-phase-7-y-block-1-kanal-house-001' && x.publishable === true && x.status === 'available');
  const residential = [
   ...(featuredHouseRecord ? [{
    id:featuredHouseRecord.id,
