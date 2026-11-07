@@ -542,3 +542,33 @@ td,.rate-table td,.aff-table td{font-size:14px;color:#202936;font-weight:500}
 .lux-hero-shade{z-index:0;background:linear-gradient(90deg,rgba(5,15,27,.91) 0%,rgba(5,15,27,.72) 48%,rgba(5,15,27,.35) 100%),linear-gradient(0deg,rgba(5,15,27,.34),rgba(5,15,27,.12))}
 .lux-hero-content,.lux-hero-index{z-index:1}
 @media(max-width:700px){.lux-hero{min-height:650px}.lux-hero-image iframe{width:max(100%,177.78vh);height:max(100%,56.25vw)}}
+
+
+/* Hero media: full-bleed video on desktop, lightweight image fallback on phones */
+.lux-hero{isolation:isolate;overflow:hidden;min-height:clamp(620px,76vh,820px)}
+.lux-hero-image{overflow:hidden;pointer-events:none;background-position:center 55%}
+.lux-hero-image iframe{position:absolute;top:50%;left:50%;width: max(100vw,177.78vh);height:max(56.25vw,100vh);min-width:100%;min-height:100%;transform:translate(-50%,-50%);border:0;pointer-events:none}
+.lux-hero-shade{z-index:0;pointer-events:none}
+.lux-hero-content,.lux-hero-index{z-index:1}
+.lux-actions .lux-btn{min-width:190px}
+.lux-actions .lux-btn:focus-visible,.lux-search-button:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.lux-search-panel select:focus-visible{outline:2px solid var(--lux-gold);outline-offset:2px}
+@media(max-width:700px){
+ .lux-hero{min-height:680px;padding:76px 7% 88px}
+ .lux-hero-image{background-position:62% center;transform:none;animation:none}
+ .lux-hero-image iframe{display:none}
+ .lux-hero-shade{background:linear-gradient(90deg,rgba(10,20,32,.92),rgba(10,20,32,.64)),linear-gradient(0deg,rgba(10,20,32,.48),transparent 70%)}
+ .lux-actions{display:grid;grid-template-columns:1fr;width:100%;max-width:360px}
+ .lux-actions .lux-btn{width:100%;min-height:52px}
+ .lux-hero-index{bottom:20px}
+ .lux-search-panel{gap:10px}
+ .lux-search-panel label{min-width:0}
+ .lux-search-panel select{font-size:12px}
+}
+@media(max-width:390px){
+ .lux-hero{min-height:700px;padding-left:6%;padding-right:6%}
+ .lux-hero h1{font-size:clamp(39px,11.5vw,48px)}
+ .lux-search-panel{grid-template-columns:1fr}
+ .lux-search-button{grid-column:auto;width:100%}
+}
+@media(prefers-reduced-motion:reduce){.lux-hero-image{animation:none}}
