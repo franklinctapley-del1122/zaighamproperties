@@ -48,7 +48,7 @@ function Home(){
  const phaseNames=Array.from({length:13},(_,i)=>'DHA Phase '+(i+1));
  const searchPhases=['All phases',...Array.from(new Set(inventory.map(x=>x.phase)))];
  const sizes=['Any size','5 Marla','7 Marla','8 Marla','9 Marla','10 Marla','22 Marla','25 Marla','28 Marla','1 Kanal','2 Kanal'];
- const goSearch=()=>{const params=new URLSearchParams({type:filters.type,phase:filters.phase,size:filters.size,purpose:filters.purpose});window.location.href='/properties?'+params.toString()};
+ const goSearch=()=>{if(filters.purpose==='Sell'){window.location.href='/contact?purpose=sell';return}if(filters.purpose==='Investment'){window.location.href='/advisory-services/?purpose=investment';return}const params=new URLSearchParams({type:filters.type,phase:filters.phase,size:filters.size,purpose:'Buy'});window.location.href='/properties?'+params.toString()};
  const featuredHouseRecord = houseInventory.listings.find(x=>x.id==='dha-phase-7-y-block-1-kanal-house-001' && x.publishable === true && x.status === 'available');
  const residential = [
   {type:'RESIDENTIAL PLOTS',name:'Residential plots in DHA Lahore',phase:'Explore phases and blocks',size:'Multiple plot sizes',price:'Availability on confirmation',img:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=85',desc:'Discuss plot size, phase, block, possession or file status and your budget.',href:'/plots-for-sale'},
