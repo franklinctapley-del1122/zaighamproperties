@@ -572,3 +572,17 @@ td,.rate-table td,.aff-table td{font-size:14px;color:#202936;font-weight:500}
  .lux-search-button{grid-column:auto;width:100%}
 }
 @media(prefers-reduced-motion:reduce){.lux-hero-image{animation:none}}
+
+
+/* Homepage semantic rate preview and clear enquiry states */
+.lux-rate-preview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.lux-rate-preview article{display:flex;flex-direction:column;gap:9px;padding:22px;background:#fff;border:1px solid #e6e1d7;min-width:0}
+.lux-rate-preview article>span,.lux-rate-preview article>small{font-size:11px;line-height:1.6;color:#68727d}
+.lux-rate-preview article>b{font-size:14px;color:#17283a}
+.lux-rate-preview article>strong{font:700 27px/1.1 var(--font-editorial);color:#9a7136}
+.lux-rate-empty{margin-top:24px;padding:24px;background:#f0eee8;border-left:3px solid #c6a15b}
+.lux-rate-empty>b{display:block;color:#17283a;font-size:16px}
+.lux-rate-empty p{max-width:780px;color:#596471;font-size:13px;line-height:1.8}
+.lux-rate-empty a,.lux-investment-specialist-link a{display:inline-flex;align-items:center;gap:8px;color:#8b642a;font-size:12px;font-weight:800}
+.lux-investment-specialist-link{display:block;margin-top:18px}
+@media(max-width:760px){.lux-rate-preview{grid-template-columns:1fr}.lux-rate-preview article{padding:18px}}
